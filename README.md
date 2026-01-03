@@ -37,7 +37,7 @@ The notebook writes:
    - Engagement features from web/app (counts, active days, recency, simple rates).
    - Web content intent via topic shares: start from brief-driven seeds, expand keywords from train web text using TF‑IDF lift, then count topic visits per member.
    - Claims burden via claim counts/recency and a small set of ICD indicators (top 5 by absolute churn lift among sufficiently prevalent codes).
-3) **Model 1 (churn-risk)**: Logreg, churn prediction is evaluated with stratified K-fold CV and ROC-AUC (threshold-free, robust under class imbalance).
+3) **Model 1 (churn-risk)**: churn prediction is evaluated with stratified K-fold CV and ROC-AUC (threshold-free, robust under class imbalance).
 4) **Model 2 (uplift / who benefits from outreach)**:
    - Fit a propensity model `P(outreach|X)` to adjust for non-random outreach.
    - Fit separate churn models for control vs treated and define uplift as `P(churn|no outreach) - P(churn|outreach)`.
